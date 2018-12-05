@@ -15,7 +15,7 @@
                                       <div id='comment'>
                                         <?php include("includes/comment.php"); ?>
                                       </div>
-                                      <form name="comment" action="bd.php" method="post">
+                                      <form name="comment" action="bdcomment.php" method="post">
                                         <h3>Залиште коментар:</h3> 
                                           <p>
                                             <label>Ім'я:</label>
