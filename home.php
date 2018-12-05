@@ -28,7 +28,7 @@
                                           </p>
                                           <p>
                                             <input type="hidden" name="page_id" value="1" />
-                                            <input type="submit" value="Отправить" />
+                                            <input type="submit" value="Залишити коментар" />
                                           </p>
                                       </form>
                                   </div>
