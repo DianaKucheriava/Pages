@@ -14,16 +14,16 @@
                 $result->store_result();
                 $row_cnt = $result->num_rows;
             if($row_cnt > 0){ $err[] = "Користувач з таким логіном вже існує в базі даних!";}
-                if(count($err) == 0){
+            if(count($err) == 0){
                     $login = $_POST['login'];
                     $password = $_POST['password'];
                     $stmt2=$link->prepare("INSERT INTO users SET login=(?), password=(?)");
                     $stmt2->bind_param('ss', $login, $password);
                     $stmt2->execute();
                     header("Location:index.php"); exit();
-                } else {
-                        echo  "<form id='errorSave'><b>При реєстрації відбулись наступні помилки:</b><br>";
-                        foreach($err AS $error){ echo $error."<br></form>";}
-                        }
+            } else {
+                    echo  "<form id='errorSave'><b>При реєстрації відбулись наступні помилки:</b><br>";
+                    foreach($err AS $error){ echo $error."<br></form>";}
+                    }
         }
 ?>
