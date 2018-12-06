@@ -9,20 +9,21 @@
                     if(strlen($_POST['login']) < 3 or strlen($_POST['login']) > 30) //перевірка чи логін від 3 до 30 символів
                     {
                 $err[] = "Логін не повинен бути меньше 3-х символів і не більше 30";}
-                $result = $link->query("SELECT id FROM users WHERE login='".$mysqli->affected_rows['login']."'");
-                $row_cnt = $result->num_rows;
-
-                             if($row_cnt > 0)
+                $stmt1 = $link->prepare("SELECT id FROM users WHERE login=?");
+                $stmt1->bind_param('s', $link->affected_rows['login']);
+                 $stmt1->execute();
+                 $stmt1->store_result();
+                 $row_cnt = $stmt1->num_rows;
+                if($row_cnt > 0)
                              {
                                 $err[] = "Користувач з таким логіном вже існує в базі даних!";
                             }
                                     if(count($err) == 0){
                                         $login = $_POST['login'];
                                         $password = $_POST['password'];
-                                        $stmt=$link->prepare("INSERT INTO users SET login=(?), password=(?)");
-                                        $stmt->bind_param('ss', $login, $password);
-                                        $stmt->execute();
-                                       // $link->query("INSERT INTO users SET login='".$login."', password='".$password."'");
+                                        $stmt2=$link->prepare("INSERT INTO users SET login=(?), password=(?)");
+                                        $stmt2->bind_param('ss', $login, $password);
+                                        $stmt2->execute();
                                         header("Location:index.php"); exit();
                             }
                                 else{
