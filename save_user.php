@@ -19,7 +19,10 @@
                                     if(count($err) == 0){
                                         $login = $_POST['login'];
                                         $password = $_POST['password'];
-                                        $link->query("INSERT INTO users SET login='".$login."', password='".$password."'");
+                                        $stmt=$link->prepare("INSERT INTO users SET login=(?), password=(?)");
+                                        $stmt->bind_param('ss', $login, $password);
+                                        $stmt->execute();
+                                       // $link->query("INSERT INTO users SET login='".$login."', password='".$password."'");
                                         header("Location:index.php"); exit();
                             }
                                 else{
