@@ -1,7 +1,6 @@
 <?php
-$server = "localhost";
-$user = "user";
-$pass = "1234";
-$database = "mysql";
-$link = mysqli_connect($server, $user, $pass, $database);
+$link = new mysqli("localhost", "user", "1234", "mysql");
+if ($link->connect_errno) {
+    printf("Не вдалось підключитись: %s\n", $link->connect_error); exit();
+}
 ?>
