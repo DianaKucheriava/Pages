@@ -11,36 +11,36 @@
                     <form method="POST" action="">
                     	<h3>Реєстрація</h3>
 	                    	<table id="tbcity">
-									<tr>
-										 <td><label>Країна</label></td>
-										 <td><select class="country" name="country" id="country">
-										 	<option value="0">---Оберіть країну---</option>
-										 	<?php include("country.php"); ?>									
-										 </select></td>
-									</tr>
-									<tr>
-										<td><label>Область</label></td>
-										<td><span class="region" name="region" id="region"></span></td>
-									</tr>
-									<tr>
-										<td><label>Країна</label></td>
-										<td><span class="city" name="city" id="city"></span></td>
-									</tr>
-									<tr>
-										<td><label>Ваш логін:</label></td>
-										<td><input name="login" type="text" size="15" maxlength="15"></td>
-									</tr>
-									<tr>
-										<td><label>Ваш пароль:</label></td>
-							    		<td><input name="password" type="password" size="15" maxlength="15"></td>
-									</tr>
-									<tr>
-										<td><input type="submit" name="submit" value="Зареєструватись" id="buttRegest"></td>
-									</tr>
-							</table>
-					</form>
-				</div>
-			</div>
+					<tr>
+						 <td><label>Країна</label></td>
+						 <td><select class="country" name="country" id="country">
+							<option value="0">---Оберіть країну---</option>
+							<?php include("country.php"); ?>									
+							 </select></td>
+					</tr>
+					<tr>
+						<td><label>Область</label></td>
+						<td><span class="region" name="region" id="region"></span></td>
+					</tr>
+					<tr>
+						<td><label>Країна</label></td>
+						<td><span class="city" name="city" id="city"></span></td>
+					</tr>
+					<tr>
+						<td><label>Ваш логін:</label></td>
+						<td><input name="login" type="text" size="15" maxlength="15"></td>
+					</tr>
+					<tr>
+						<td><label>Ваш пароль:</label></td>
+						<td><input name="password" type="password" size="15" maxlength="15"></td>
+					</tr>
+					<tr>
+						<td><input type="submit" name="submit" value="Зареєструватись" id="buttRegest"></td>
+					</tr>
+				</table>
+			</form>
 		</div>
-	</section>
+	 </div>
+   </div>
+</section>
 <?php include("includes/footer.php"); ?>
