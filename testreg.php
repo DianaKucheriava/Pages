@@ -1,5 +1,5 @@
 <?php
-  include ("bd.php");
+   include ("bd.php");
    if (isset($_POST['submit'])){  
        $err = [];
        $login = $_POST['login'];
@@ -8,8 +8,12 @@
        $result->bind_param('s', $login);
        $result->execute();
        $user_data = $result->get_result()->fetch_array(MYSQLI_ASSOC);
-          if ($user_data['password'] == $password){header("Location:home.php"); exit();
-          }
-            else { $err[]="Помилковий логін\пароль !"; } 
+     if ($user_data['password'] == $password){
+       header("Location:home.php");
+       exit();
+     }
+     else { 
+         $err[]="Помилковий логін\пароль !"; 
+     } 
    } 
 ?>
