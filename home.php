@@ -13,7 +13,7 @@
             <div id="commentBlock">
                   <?php include("includes/comment.php"); ?>
              </div>
-             <form action="sendMessage.php" method="post" name="form">
+             <form action="" method="post" name="form">
              <table>
                <tr>
                  <td> <label>Ім'я:</label><br /> <input name="name" type="text" id="name"></td>
