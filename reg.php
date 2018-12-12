@@ -2,13 +2,13 @@
 <?php include("includes/header.php"); ?>
 <?php include ("bd.php"); ?>
     <section>
-    	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="assets/js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="assets/js/region.js"></script>
-		<script type="text/javascript" src="assets/js/city.js"></script>
-		<div class="container">
-			<div class="row text-center header">
-			    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/region.js"></script>
+    <script type="text/javascript" src="assets/js/city.js"></script>
+	<div class="container">
+		<div class="row text-center header">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
 			        <form id='errorSave'><?php 
 						if (is_array($err) || is_object($error)){
 							foreach ($err as $error){
