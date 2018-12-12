@@ -9,10 +9,9 @@
        $result->execute();
        $user_data = $result->get_result()->fetch_array(MYSQLI_ASSOC);
      if ($user_data['password'] == $password){
-       header("Location:home.php");
-       exit();
-     }
-     else { 
+         header("Location:home.php");
+         exit();
+     }else{ 
          $err[]="Помилковий логін\пароль !"; 
      } 
    } 
