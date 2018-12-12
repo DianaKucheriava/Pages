@@ -19,12 +19,12 @@
                 $err[] = "Логін не повинен бути меньше 3-х символів і не більше 30";
             }
             if(count($err) == 0){
-                    $login = $_POST['login'];
-                    $password = $_POST['password'];
-                    $stmt2=$link->prepare("INSERT INTO users SET login=(?), password=(?), id_country=(?), id_region=(?), id_city=(?)");
-                    $stmt2->bind_param('sssss', $login, $password, $country, $region, $city);
-                    $stmt2->execute();
-                    header("Location:index.php"); exit();
+                $login = $_POST['login'];
+                $password = $_POST['password'];
+                $stmt2=$link->prepare("INSERT INTO users SET login=(?), password=(?), id_country=(?), id_region=(?), id_city=(?)");
+                $stmt2->bind_param('sssss', $login, $password, $country, $region, $city);
+                $stmt2->execute();
+                header("Location:index.php"); exit();
             } 
         }
 ?>
