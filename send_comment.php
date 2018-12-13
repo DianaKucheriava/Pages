@@ -1,8 +1,8 @@
 <?php session_start();
 	include("bd.php"); 
 	if(empty($_POST['js'])){
-		if($_POST['message'] != '' && $_POST['id'] != ''){
-			$id=$_POST['id'];
+		if($_POST['message'] != '' && $_SESSION["id"] != ''){
+			$id = $_SESSION["id"];
 			$message =  $_POST['message'];
 			$date = date('Y-m-d H:i:s'); 
 			$result = $link->prepare("INSERT INTO comments (id, text_comment, date) VALUES (?,?,?)");
