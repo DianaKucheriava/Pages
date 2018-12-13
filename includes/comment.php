@@ -4,6 +4,6 @@
 	$all_comment=$result->fetch_array(MYSQLI_BOTH);
 	do {
 		echo "<b>".$all_comment['user']."</b> - <i>".$all_comment['text_comment']."</i><br>".$all_comment['date']."<br />";
-	}
+	   }
 	while ($all_comment=$result->fetch_array(MYSQLI_BOTH));
 ?>
