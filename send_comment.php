@@ -1,4 +1,5 @@
-<?php include("bd.php");
+<?php session_start();
+	include("bd.php"); 
 	if(empty($_POST['js'])){
 		if($_POST['message'] != '' && $_POST['id'] != ''){
 			$id=$_POST['id'];
