@@ -7,7 +7,13 @@
 			$result = $link->prepare("INSERT INTO comments (id, text_comment, date) VALUES (?,?,?)");
 			$result->bind_param('sss', $id, $message, $date);
 			$result->execute();
-			echo json_encode(array('Ваше повідомлення відправлено' => $success, 'Повідомлення не відправлено Помилка БД' => $success, 'Неможна відправляти порожні повідомлення' => $success)); 
-		}
+			if($result == true){
+				echo 0; 
+			}else{
+				echo 1; 
+			}
+		}else{
+				echo 2; 
+		}	
 	}
 ?>
