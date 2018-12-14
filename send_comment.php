@@ -10,14 +10,14 @@ if(empty($_POST['js'])){
 		$result->execute();
 		if($result == true){
 			$success=true;
-    		$message = 'Ваше повідомлення відправлено';  
+    			$message = 'Ваше повідомлення відправлено';  
 		}else if($result == false){
 			$success=false;
    			$message = 'Повідомлення не відправлено Помилка БД';  
 		}
 	} else {
-			$success = false; 
-			$message = 'Не можна відправляти порожні повідомлення!';  
+		$success = false; 
+		$message = 'Не можна відправляти порожні повідомлення!';  
 	}
 	$result=array("message" => $message, "success" => $success);
 	echo json_encode($result);
