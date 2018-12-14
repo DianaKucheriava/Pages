@@ -1,5 +1,5 @@
 <?php session_start(); 
-    header('Content-type: application/json');
+header('Content-type: application/json');
 include("bd.php");
 if(empty($_POST['js'])){
 	if($_POST['message'] != '' && $_SESSION["user_id"] != ''){
