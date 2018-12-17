@@ -16,17 +16,17 @@
       <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
         <div class="services-wrapper">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">
-               <form id='error'><?php 
-                if (is_array($err) || is_object($error)){
-                  foreach ($err as $error){
-                    echo $error;
-                  }
+            <form id='error'><?php 
+              if (is_array($err) || is_object($error)){
+                 foreach ($err as $error){
+                   echo $error;
+                 }
                   if (is_array($er) || is_object($error)) {
                     foreach ($er as $error) {
-                     echo $error;
+                      echo $error;
                     }
                   }
-                }?>
+              }?>
             </form>
             <h3>Налаштування </h3>
             <form action="" method="post" name="form" id="form">
@@ -45,10 +45,10 @@
                 <tr>
                   <td><input id="update_passw" type = "submit" name = "update_password" value = "Змінити логін"></td>
                 </tr>
-                 <tr>
+                <tr>
                   <td></td><td><label>Змінити логін</label></td>
                 </tr>
-                 <tr>
+                <tr>
                   <td><p>Введіть пароль:</p><input name="password" type="password" size="15" maxlength="15"></td>
                   <td><p>Введіть новий логін:</p><input name="new_login" type="varchar" size="15" maxlength="15"></td>
                 </tr>
