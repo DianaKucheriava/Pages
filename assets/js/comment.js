@@ -5,7 +5,7 @@ $(function() {
       $.ajax({
         type: "POST",
         url: "send_comment.php",
-        data: {"user_id": user_id, "message": message},
+        data: {"message": message},
         cache: false, 
         dataType:"json",
         success: function(data) {
