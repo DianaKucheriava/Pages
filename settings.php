@@ -29,12 +29,12 @@
               }?>
             </form>
             <h3>Налаштування </h3>
-            <form action="" method="post" name="form" id="form">
               <table id="settingsTable">
                 <tr>
                   <td><?php include("includes/avatar.php"); ?><img id="settingsAva" src="<?php echo $ava['img_src'] ?>"></td>
                   <td><label>Змінити фото </label><form name="upload" action="save_avatar.php" method="POST" ENCTYPE="multipart/form-data"><input type="file" name="userfile"><br><input type="submit" name="upload" value="Змінити фото"></form></td>
                 </tr>
+               <form action="" method="post" name="form" id="form">
                 <tr>
                   <td></td><td><label>Змінити пароль</label></td>
                 </tr>
@@ -55,9 +55,9 @@
                 <tr>
                   <td><input id="update_log" type = "submit" name = "update_login" value = "Змінити логін"></td>
                 </tr>
+               </form>
               </table>
-            </form>
-          </div>
+            </div>
         </div>
       </div>
     </div>
