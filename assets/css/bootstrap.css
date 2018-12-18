@@ -1,14 +1,43 @@
-/*!
- * Bootstrap v3.3.2 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+}
+#settingsTable{
+  background-color: #ca969663;
+  margin-top: 20px;
+  border: 1px;
+  border-color: white;
+  width: 66%;
+  position: absolute;
+}
+#update_passw,#update_log{
+  position: relative;
+  left: 248px;
+  margin: 17px;
+}
+#smallAva{
+  width: 20px;
+  height: 20px;
+}
+#settingsAva{
+  position: relative;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+}
+#error{
+  position: absolute;
+  color: red;
+  top: 49px;
+  left: 89px;
+}
+#avatar{
+  width: 50px;
+  height: 50px;
+}
+#error{
+  color: red;
 }
 #commentBlock{
     background: darkgrey;
